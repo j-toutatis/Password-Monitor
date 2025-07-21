@@ -13,7 +13,7 @@ foreach ($user in $users){
         $total_Expired++
     }
     elseif ($warning_Date -le $current_Date){
-        Write-Host "the password for user: '$($user.DisplayName)' will expire on '$expiry_Date'"
+        Write-Host "the password for user: '$($user.DisplayName)' will expire on '$expiry_Date'.  Email the user at '$($user.UserPrincipalName)' to reset their password."
         $total_Warning++
     }
     else {
